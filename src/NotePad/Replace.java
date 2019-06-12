@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Replace extends JFrame{
-   //private JFrame replace;
     Replace(JTextPane d,UiStructure ui){
         JPanel repnl = new JPanel();
         JTextField replacetext = new JTextField(20);
