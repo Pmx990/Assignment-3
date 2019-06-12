@@ -1,14 +1,11 @@
 import javax.swing.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 
 
 public class Recent {
     private int count = 0;
     JMenu recent;
 
-    Recent(JMenu recent1){ //,
+    Recent(JMenu recent1){
         recent = recent1;
     }
 
@@ -17,6 +14,9 @@ public class Recent {
         adr1.addActionListener(ui);
         adr1.setActionCommand("recent");
         JMenuItem[] temp = new JMenuItem[count];
+        /*
+        * Use array to make the most recent one on the top
+        * */
         if(count == 0){
             recent.add(adr1,count);
             count+=1;
