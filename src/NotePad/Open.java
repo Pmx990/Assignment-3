@@ -7,6 +7,9 @@ public class Open {
     JTextPane d;
     Recent r;
     Open(JTextPane dx,UiStructure ui,Recent r) {
+        /*
+        * Opening the file from file chooser
+        * */
         d=dx;
         JFileChooser jc = new JFileChooser();
         jc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -34,10 +37,11 @@ public class Open {
         }
     }
     Open(String adr,JTextPane dx){
+        /*
+        * Opening the recent file
+        * */
         d=dx;
         File file = new File(adr);
-
-       // d.setText();
         try{
             int temp=0;
             InputStream in = new FileInputStream(file);
