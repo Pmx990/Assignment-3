@@ -8,6 +8,9 @@ public class MenuStrategy {
         r=r1;
     }
      public void menuCall(String type, JTextPane d,UiStructure ui,JMenuItem adr1) {
+        /*
+        * Through strategy, call different functions while different action was requested
+        * */
          switch (type) {
              case "new": {
                  CreateNew n = new CreateNew(d);
