@@ -1,16 +1,12 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
 import java.awt.Dimension;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import javax.swing.JFrame;
-        import javax.swing.JMenu;
-        import javax.swing.JMenuBar;
-        import javax.swing.JMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
-        import javax.swing.JTextPane;
+import javax.swing.JTextPane;
 /*
  * Change list
  * 1. make the main independent from the UI
@@ -47,7 +43,6 @@ public class UiStructure extends JFrame implements ActionListener {
         filemenu.addSeparator();
         filemenu.add(printfile);
         filemenu.add(recent);
-        // editmenu.add(u);
         editmenu.add(copy);
         editmenu.add(paste);
         editmenu.add(replace);
@@ -64,8 +59,6 @@ public class UiStructure extends JFrame implements ActionListener {
         paste.setActionCommand("paste");
         replace.addActionListener(this);
         replace.setActionCommand("replace");
-       // u.addActionListener(this);
-       // u.setActionCommand("undo");
         menubar.add(filemenu);
         menubar.add(editmenu);
         setJMenuBar(menubar);
@@ -80,13 +73,8 @@ public class UiStructure extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         MenuStrategy ms = new MenuStrategy(recent);
         System.out.println(e.getActionCommand());
-     //   if (e.getActionCommand().equals("recent")) {
-//            ms.recentCall((JMenuItem) e.getSource());
             JMenuItem a = (JMenuItem)e.getSource();
-      //      ms.recentCall(a,d);
-       // } else {
             ms.menuCall(e.getActionCommand(), d, this,a);
-       // }
     }
 
 
